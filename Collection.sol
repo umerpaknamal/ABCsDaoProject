@@ -2,7 +2,7 @@
  *Submitted for verification at polygonscan.com on 2022-03-13
 */
 
-// File: @openzeppelin/contracts/utils/introspection/IERC165.sol
+File: @openzeppelin/contracts/utils/introspection/IERC165.sol
 pragma solidity ^0.8.0;
 /**
  * @dev Interface of the ERC165 standard, as defined in the
@@ -25,7 +25,7 @@ interface IERC165 {
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
 }
 
-// File: @openzeppelin/contracts/token/ERC721/IERC721.sol
+File: @openzeppelin/contracts/token/ERC721/IERC721.sol
 pragma solidity ^0.8.0;
 /**
  * @dev Required interface of an ERC721 compliant contract.
