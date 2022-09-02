@@ -1,9 +1,7 @@
 // SPDX-License-Identifier: MIT LICENSE
 
-
-
-
 pragma solidity 0.8.4;
+//import "./ABCs.sol";
 import "https://github.com/umerpaknamal/DaoProject/N2DRewards.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
@@ -104,7 +102,7 @@ contract NFTStaking is Ownable, IERC721Receiver {
       });
     }
     if (earned > 0) {
-      token.mint(account, earned);
+     token.mint(account, earned);
     }
     if (_unstake) {
       _unstakeMany(account, tokenIds);
