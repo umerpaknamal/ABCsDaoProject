@@ -18,7 +18,7 @@ contract N2DRewards is ERC20, ERC20Burnable, Ownable {
   uint256 private MAXSUP;
   uint256 MAXIMUMSUPPLY=1000000;
 
-  constructor() ERC20("Ambersterdam", "ABCs") { 
+  constructor() ERC20("Ambersterdam", "AMBD") { 
 
   }
 
@@ -58,6 +58,7 @@ contract N2DRewards is ERC20, ERC20Burnable, Ownable {
 
   function sendTokensToCommunity(address community) public payable onlyOwner{
     uint256 moneyToTransfer = _totalSupply/100 * 15;
+    _totalSupply = _totalSupply - moneyToTransfer;
     transfer(community, moneyToTransfer);
   }
   
