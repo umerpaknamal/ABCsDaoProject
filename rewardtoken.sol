@@ -1,6 +1,6 @@
-// SPDX-License-Identifier: MIT LICENSE
 
-pragma solidity 0.8.4;
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.7;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -14,11 +14,11 @@ contract N2DRewards is ERC20, ERC20Burnable, Ownable {
   mapping(address => bool) controllers;
 
   uint256 private _totalSupply;
+  uint public timenow =  block.timestamp;
   uint256 private MAXSUP;
-  uint256 constant MAXIMUMSUPPLY=1000000*10**18;
+  uint256 MAXIMUMSUPPLY=1000000;
 
-  constructor() ERC20("N2DRewards", "N2DR") { 
-      _mint(msg.sender, 1000000 * 10 ** 18);
+  constructor() ERC20("Ambersterdam", "AMBD") { 
 
   }
 
@@ -52,8 +52,18 @@ contract N2DRewards is ERC20, ERC20Burnable, Ownable {
     return _totalSupply;
   }
 
-  function maxSupply() public  pure returns (uint256) {
+  function maxSupply() public view returns (uint256) {
     return MAXIMUMSUPPLY;
   }
 
+  function sendTokensToCommunity(address community) public payable onlyOwner{
+    uint256 moneyToTransfer = _totalSupply/100 * 15;
+    transfer(community, moneyToTransfer);
+  }
+  
+  function oneThirdSupply() public {
+      require(block.timestamp + 30 > block.timestamp, "time is 2 blocks");
+      MAXIMUMSUPPLY = MAXIMUMSUPPLY/3;
+  }
+  
 }
