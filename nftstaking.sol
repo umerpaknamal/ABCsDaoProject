@@ -2,7 +2,7 @@
 
 pragma solidity 0.8.4;
 //import "./ABCs.sol";
-import "https://github.com/umerpaknamal/DaoProject/N2DRewards.sol";
+import "https://github.com/umerpaknamal/DaoProject/rewardtoken.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 
