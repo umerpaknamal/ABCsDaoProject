@@ -18,7 +18,7 @@ contract N2DRewards is ERC20, ERC20Burnable, Ownable {
   uint256 private MAXSUP;
   uint256 MAXIMUMSUPPLY=1000000;
 
-  constructor() ERC20("Ambersterdam", "ABCs") { 
+  constructor() ERC20("Ambersterdam Books Coin", "ABCs") { 
 
   }
 
