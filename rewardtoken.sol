@@ -18,7 +18,7 @@ contract ABCs is ERC20, ERC20Burnable, Ownable {
   uint256 private MAXSUP;
   uint256 MAXIMUMSUPPLY=1000000*10**18;
 
-  constructor() ERC20("Amsterdam Books Coin", "ABCs") { 
+  constructor() ERC20("Amsterdam Books Coin", "ABC") { 
 
   }
 
@@ -63,7 +63,7 @@ contract ABCs is ERC20, ERC20Burnable, Ownable {
   }
   
   function oneThirdSupply() public {
-      require(block.timestamp + 30 > block.timestamp, "time is 2 blocks");
+      require(block.timestamp + 31536000 > block.timestamp, "time is 2 blocks");
       MAXIMUMSUPPLY = MAXIMUMSUPPLY/3;
   }
   
