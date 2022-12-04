@@ -309,7 +309,7 @@ contract Dao {
     constructor() {
         owner = msg.sender;
         nextProposal = 1;
-        ABCs = ABC(0xC6B09aF01b328a8F0b3dfbD19602B5b12Df8Beba);
+        ABCs = ABC(0xF54bB2D328DE68A8365e41BC2FFa21EF6C548FcE);
     }
     struct proposal {
         address proposalar;
